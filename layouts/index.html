@@ -1,0 +1,175 @@
+{{ define "main" }}
+
+<!-- 1. PHẦN UBER EATS + GIỚI THIỆU QUÁN + HÌNH NỀN -->
+<section class="relative py-20 bg-cover bg-center bg-no-repeat text-center" 
+         style="background-image: url('/images/uber-background.jpg');">
+    
+    <!-- Lớp overlay tối để chữ và nút nổi bật -->
+    <div class="absolute inset-0 bg-black/65"></div>
+
+    <div class="relative max-w-5xl mx-auto px-6 z-10">
+        <h1 class="text-5xl md:text-6xl font-bold tracking-tight text-white mb-3">
+            BÁNH MÌ PHƯƠNG MAI - MAI'S SUBMARINE & DELI
+        </h1>
+        <p class="text-xl text-white/90 mb-2">4710 17 Ave SE, Calgary, AB T2A 0V1, Canada</p>
+        <p class="text-2xl font-medium text-white mb-6">+1 403-235-0142</p>
+        
+        <!-- Rating -->
+        <div class="flex justify-center items-center gap-1 mb-10">
+            <span class="text-3xl text-amber-400">★★★★☆</span>
+            <span class="text-white/80 ml-2">(158 reviews)</span>
+        </div>
+
+        <!-- Nút Uber Eats -->
+        <a href="{{ .Site.Params.uber_eats_link }}" target="_blank"
+           class="inline-flex items-center gap-4 bg-[#FF9500] hover:bg-[#FB923C] text-white font-bold text-2xl px-14 py-6 rounded-3xl shadow-2xl hover:scale-105 transition">
+            <i class="fa-brands fa-uber text-4xl"></i>
+            ORDER NOW ON UBER EATS
+        </a>
+    </div>
+</section>
+
+<!-- 2. SIGNATURE DISHES – KHUNG VỪA KHÍT -->
+<section id="menu" class="py-16 bg-[#FFF7ED]">
+    <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12 text-amber-900">Signature Dishes</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+            
+            <!-- Bánh Mì -->
+            <div class="bg-white rounded-3xl overflow-hidden shadow-lg">
+                <img src="/images/banhmi.jpg" alt="Bánh Mì" class="w-full aspect-[9/5] object-cover">
+                <div class="p-5 text-center">
+                    <h3 class="font-semibold text-xl">Bánh Mì / Sub</h3>
+                    <p class="text-amber-600 font-bold">$7.00 - $12.00 CAD</p>
+                </div>
+            </div>
+
+            <!-- Lẩu Dê -->
+            <div class="bg-white rounded-3xl overflow-hidden shadow-lg">
+                <img src="/images/laude.jpg" alt="Lẩu Dê" class="w-full aspect-[9/5] object-cover">
+                <div class="p-5 text-center">
+                    <h3 class="font-semibold text-xl">Lẩu Dê / Goat Hot Pot</h3>
+                    <p class="text-amber-600 font-bold">$28 CAD</p>
+                </div>
+            </div>
+
+            <!-- Bubble Tea -->
+            <div class="bg-white rounded-3xl overflow-hidden shadow-lg">
+                <img src="/images/bubbletea.jpg" alt="Bubble Tea" class="w-full aspect-[9/5] object-cover">
+                <div class="p-5 text-center">
+                    <h3 class="font-semibold text-xl">Bubble Tea</h3>
+                    <p class="text-amber-600 font-bold">$5 - $6 CAD</p>
+                </div>
+            </div>
+
+            <!-- Bò Kho -->
+            <div class="bg-white rounded-3xl overflow-hidden shadow-lg">
+                <img src="/images/bokho.jpg" alt="Bò Kho" class="w-full aspect-[9/5] object-cover">
+                <div class="p-5 text-center">
+                    <h3 class="font-semibold text-xl">Bò Kho / Beef Stew</h3>
+                    <p class="text-amber-600 font-bold">$11 CAD</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 3. HÌNH MENU FULL (nhỏ lại một chút) -->
+<section class="py-8 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+        <img src="/images/menu-full.jpg" alt="Menu Bánh Mì Phương Mai" class="w-full h-auto rounded-3xl shadow-xl">
+    </div>
+</section>
+
+<!-- 4. FULL MENU TEXT – CÙNG MÀU NỀN VỚI SIGNATURE DISHES -->
+<section id="fullmenu" class="py-20 bg-[#FFF7ED]">
+    <div class="max-w-5xl mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12 text-amber-900">Full Menu</h2>
+        
+        <div class="prose max-w-none text-lg leading-relaxed text-stone-800">
+
+            <!-- BÁNH MÌ -->
+            <h3 class="text-3xl font-bold text-amber-800 mt-12 mb-6">BÁNH MÌ (VIETNAMESE SUBMARINES)</h3>
+            <ol class="space-y-6">
+                <li><strong>1. Pork Ball Salted Egg Yolk Submarine</strong> (Bánh Mì Xíu Mại Trứng Muối) — <span class="font-bold">$9.50</span><br>
+                    Dressed with mayo spread, pickled carrots, cucumbers, white onions, jalapenos, and cilantro.</li>
+                <li><strong>2. Phuong Mai Submarine</strong> (Bánh Mì Phương Mai) — <span class="font-bold">$10.00</span><br>
+                    Dressed with mayo spread, pickled carrots, cucumbers, white onions, jalapenos, cilantro, and signature sauce.</li>
+                <li><strong>3. Vietnamese Bacon Submarine</strong> (Bánh Mì Ba Rọi) — <span class="font-bold">$9.50</span><br>
+                    Dressed with mayo spread, patê, pickled carrots, cucumbers, white onions, jalapenos, cilantro, and signature sauce.</li>
+                <li><strong>4. Assorted Meat Submarine</strong> (Bánh Mì Thập Cẩm) — <span class="font-bold">$9.00</span><br>
+                    Dressed with mayo spread, patê, pickled carrots, cucumbers, white onions, jalapenos, cilantro, and signature sauce.</li>
+                <li><strong>5. Pork Bologna Submarine</strong> (Bánh Mì Chả Lụa) — <span class="font-bold">$9.00</span><br>
+                    Dressed with mayo spread, patê, pickled carrots, cucumbers, white onions, jalapenos, cilantro, and signature sauce.</li>
+                <li><strong>6. Grilled Pork Submarine</strong> (Bánh Mì Nem Nướng) — <span class="font-bold">$9.50</span><br>
+                    Dressed with mayo spread, pickled carrots, cucumbers, white onions, jalapenos, cilantro, and signature sauce.</li>
+                <li><strong>7. Shredded Pork Submarine</strong> (Bánh Mì Bì) — <span class="font-bold">$9.50</span><br>
+                    Dressed with mayo spread, pickled carrots, cucumbers, white onions, jalapenos, cilantro, and signature sauce.</li>
+                <li><strong>8. Beef Satay Submarine</strong> (Bánh Mì Sate Bò) — <span class="font-bold">$10.00</span><br>
+                    Dressed with mayo spread, pickled carrots, cucumbers, white onions, jalapenos, cilantro, peanuts, and signature sauce.</li>
+                <li><strong>9. Chicken Satay Submarine</strong> (Bánh Mì Sate Gà) — <span class="font-bold">$10.00</span><br>
+                    Dressed with mayo spread, pickled carrots, cucumbers, white onions, jalapenos, cilantro, peanuts, and signature sauce.</li>
+                <li><strong>10. Beef & Chicken Satay Submarine</strong> (Bánh Mì Sate Bò & Gà) — <span class="font-bold">$10.00</span><br>
+                    Dressed with mayo spread, patê, pickled carrots, cucumbers, white onions, jalapenos, cilantro, peanuts, and signature sauce.</li>
+                <li><strong>11. Beef Betel Leaves Submarine</strong> (Bánh Mì Bò Lá Lốt) — <span class="font-bold">$11.00</span><br>
+                    Dressed with mayo spread, patê, pickled carrots, cucumbers, white onions, jalapenos, cilantro, and signature sauce.</li>
+                <li><strong>12. Beef Stew with Baguette</strong> (Bánh Mì Bò Kho) — <span class="font-bold">$13.00</span></li>
+                <li><strong>13. Curry Chicken with Baguette</strong> (Bánh Mì Cà Ri Gà) — <span class="font-bold">$11.00</span></li>
+                <li><strong>14. Curry Goat with Baguette</strong> (Bánh Mì Cà Ri Dê) — <span class="font-bold">$14.00</span></li>
+                <li><strong>15. Vegetarian Submarine</strong> (Bánh Mì Chay) — <span class="font-bold">$9.00</span><br>
+                    Vegetarian. Dressed with mayo spread, pickled carrots, cucumbers, white onions, jalapenos, cilantro, and signature sauce.</li>
+                <li><strong>16. Vegetable Submarine</strong> (Bánh Mì Rau Cải) — <span class="font-bold">$6.50</span><br>
+                    Dressed with mayo spread, patê, pickled carrots, cucumbers, white onions, jalapenos, cilantro, and signature sauce.</li>
+            </ol>
+
+            <!-- ĐẶC BIỆT -->
+            <h3 class="text-3xl font-bold text-amber-800 mt-16 mb-6">ĐẶC BIỆT (SPECIAL)</h3>
+            <ul class="space-y-4">
+                <li><strong>Goat Hotpot (Lẩu Dê)</strong> — Small $28.00 / Large $52.00</li>
+                <li><strong>Lẩu Bò Thập Cẩm (Special Beef Hotpot)</strong> — Small $32.00 / Large $60.00</li>
+                <li><strong>Shredded Pork (Bì - 1 lb)</strong> — $15.00</li>
+                <li><strong>Vietnamese Pork Steamed Bun (Bánh Bao)</strong> — $4.50</li>
+                <li><strong>Grilled Pork (Nem Nướng)</strong> — 1 lb $15.00 / 1 lb Frozen $13.00</li>
+                <li><strong>Spring Rolls (Chả Giò) - Frozen</strong> — $15.00</li>
+            </ul>
+
+            <!-- GIẢI KHÁT & TRÁNG MIỆNG -->
+            <h3 class="text-3xl font-bold text-amber-800 mt-16 mb-6">GIẢI KHÁT & TRÁNG MIỆNG (BEVERAGES & DESSERTS)</h3>
+            <ul class="space-y-4">
+                <li><strong>Freshly Squeezed Sugar Cane Juice (Nước Mía Tươi)</strong> — $7.00</li>
+                <li><strong>Chilled Herbal Tea (Nước Sâm Lạnh)</strong> — $5.00</li>
+                <li><strong>Assorted Pop (Nước Ngọt) - 710 mL</strong> — $3.00</li>
+                <li><strong>Three Colour Bean Dessert (Chè 3 Màu)</strong> — $6.00</li>
+                <li><strong>Vietnamese Coffee (Cà Phê Việt Nam)</strong> — $6.00</li>
+                <li><strong>Mung Bean Pandan Leaf Milk (Sữa Đậu Xanh Lá Dứa)</strong> — $6.00</li>
+                <li><strong>Vietnamese Plain Yogurt (Sữa Chua)</strong> — $3.25</li>
+                <li><strong>Bubble Tea (Trà Boba)</strong> — Powder $6.00 / Real Fruit $6.00</li>
+            </ul>
+
+        </div>
+    </div>
+</section>
+
+<!-- 5. LOCATION + GOOGLE MAPS + GIỜ MỞ CỬA -->
+<section id="location" class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12">
+            <!-- Giờ mở cửa -->
+            <div>
+                <h2 class="text-4xl font-bold mb-8 text-amber-900">Opening Hours</h2>
+                <div class="space-y-3 text-lg">
+                    <p><strong>Monday – Friday:</strong> 9:00 AM – 8:00 PM</p>
+                    <p><strong>Saturday & Sunday:</strong> 8:00 AM – 8:00 PM</p>
+                </div>
+            </div>
+            <!-- Bản đồ -->
+            <div>
+                <h2 class="text-4xl font-bold mb-8 text-amber-900">Find Us</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2511.000!2d-113.9672956!3d51.0388399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53717b1eaae80053%3A0xcaf49767ba8204b9!2s4710%2017%20Ave%20SE%2C%20Calgary%2C%20AB%20T2A%200V1!5e0!3m2!1sen!2sca!4v1740000000000" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <p class="mt-6 text-center text-xl">{{ .Site.Params.address }} • {{ .Site.Params.phone }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ end }}

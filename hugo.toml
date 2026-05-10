@@ -1,0 +1,11 @@
+baseURL = "https://banhmiphuongmai.netlify.app"
+title = "Bánh Mì Phương Mai - Mai's Submarine & Deli"
+languageCode = "en-ca"
+
+[params]
+  business_name = "Bánh Mì Phương Mai"
+  tagline = "Authentic Vietnamese Banh Mi & Deli • Calgary"
+  phone = "(403) 235-0142"
+  address = "4710 17 Ave SE, Calgary, AB T2A 0V1"
+  uber_eats_link = "https://www.ubereats.com/ca/store/banh-mi-phuong-mai-mais-submarine-%26-deli/..."   # Ngài thay link Uber Eats thật sau
+  description = "Fresh Vietnamese sandwiches, submarine & deli in Calgary"
